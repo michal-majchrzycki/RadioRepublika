@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Radio Republika-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nl5-Ku-c6G">
+                                <rect key="frame" x="193" y="423" width="215" height="90"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="w8i-N5-8tX"/>
+                                    <constraint firstAttribute="width" constant="215" id="wcJ-RV-2am"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="play@3.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="mbx-gb-QtT"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo1.png" translatesAutoresizingMaskIntoConstraints="NO" id="reM-Yw-g8h">
+                                <rect key="frame" x="193" y="96" width="215" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="m8H-n1-Xdc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="reM-Yw-g8h" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="32" id="Ep1-VD-bjK"/>
+                            <constraint firstItem="reM-Yw-g8h" firstAttribute="trailing" secondItem="Nl5-Ku-c6G" secondAttribute="trailing" id="QuY-ny-sW3"/>
+                            <constraint firstItem="Nl5-Ku-c6G" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="ggK-kO-Qgf"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Nl5-Ku-c6G" secondAttribute="bottom" constant="38" id="hst-yo-W8G"/>
+                            <constraint firstItem="reM-Yw-g8h" firstAttribute="leading" secondItem="Nl5-Ku-c6G" secondAttribute="leading" id="rGF-PX-9bo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Radio Republika" id="p67-VA-jhF"/>
+                    <connections>
+                        <outlet property="playButton" destination="Nl5-Ku-c6G" id="lyS-l9-zfi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562" y="-320"/>
+        </scene>
+        <!--Program-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="center" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cyr-iV-edY">
+                                <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="0TP-gd-aaG">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="TextCell" textLabel="kpv-bs-LuH" style="IBUITableViewCellStyleDefault" id="3TK-O3-nZ8">
+                                        <rect key="frame" x="0.0" y="58" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="3TK-O3-nZ8" id="pEL-14-H6R">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="center" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" id="kpv-bs-LuH">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="RzV-J4-AXS"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="Sv2-pu-TV6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Program" id="iJI-mL-giK"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="cyr-iV-edY" id="Vcg-r4-04X"/>
+                        <segue destination="LIb-ri-e6q" kind="presentation" identifier="segueMonday" id="0KM-oR-8Cd"/>
+                        <segue destination="Ly3-n1-A1I" kind="presentation" identifier="segueTuesday" id="SYg-wW-hZz"/>
+                        <segue destination="n3k-RZ-flF" kind="presentation" identifier="segueWednesday" id="7KA-OI-KyI"/>
+                        <segue destination="iYR-IX-VlU" kind="presentation" identifier="segueThursday" id="cWc-R8-oPc"/>
+                        <segue destination="EPn-0m-7av" kind="presentation" identifier="segueFriday" id="CBe-fx-U5k"/>
+                        <segue destination="kiG-pX-HuF" kind="presentation" identifier="segueSaturday" id="HF2-3S-fip"/>
+                        <segue destination="2uc-bR-ENu" kind="presentation" identifier="segueSunday" id="M5g-B4-uHC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553" y="490"/>
+        </scene>
+        <!--Monday View Controller-->
+        <scene sceneID="ljU-Pn-Y2b">
+            <objects>
+                <viewController id="LIb-ri-e6q" customClass="MondayViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OGZ-WO-Pgc"/>
+                        <viewControllerLayoutGuide type="bottom" id="oAA-Zn-d2w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w9l-ju-YQK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IL-1j-B0h">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Poniedziałek" id="g9f-Z4-Ayr">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" style="done" id="yJq-yn-wek">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6vN-Uv-ECQ">
+                                                <rect key="frame" x="16" y="7" width="54" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                                                <state key="normal" title="←"/>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="LIb-ri-e6q" eventType="touchUpInside" id="6O3-Np-bMQ"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="17" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5s4-4a-xPj">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Asp-ez-aMa" rowHeight="20" style="IBUITableViewCellStyleDefault" id="e8W-J1-dSK">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e8W-J1-dSK" id="Pef-fr-qgI">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Asp-ez-aMa">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LIb-ri-e6q" id="RFU-gk-ZVX"/>
+                                    <outlet property="delegate" destination="LIb-ri-e6q" id="qtz-VX-YeI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1IL-1j-B0h" secondAttribute="trailing" id="Hhe-fS-xbh"/>
+                            <constraint firstItem="5s4-4a-xPj" firstAttribute="trailing" secondItem="1IL-1j-B0h" secondAttribute="trailing" id="JHC-jH-NcR"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="5s4-4a-xPj" secondAttribute="bottom" id="aT8-yN-Vev"/>
+                            <constraint firstItem="1IL-1j-B0h" firstAttribute="top" secondItem="OGZ-WO-Pgc" secondAttribute="bottom" id="fcL-aF-Mnd"/>
+                            <constraint firstItem="5s4-4a-xPj" firstAttribute="top" secondItem="1IL-1j-B0h" secondAttribute="bottom" id="m51-JG-Y40"/>
+                            <constraint firstItem="5s4-4a-xPj" firstAttribute="leading" secondItem="1IL-1j-B0h" secondAttribute="leading" id="pmY-cH-SeW"/>
+                            <constraint firstItem="1IL-1j-B0h" firstAttribute="leading" secondItem="w9l-ju-YQK" secondAttribute="leading" id="u2H-J3-oYH"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tbData" destination="5s4-4a-xPj" id="xfS-cX-orY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FbP-h3-5Ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="376" y="1023"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="bQn-qG-coq" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="ZA1-Gu-7jr" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Tuesday View Controller-->
+        <scene sceneID="7n8-mG-KTb">
+            <objects>
+                <viewController id="Ly3-n1-A1I" customClass="TuesdayViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7tP-VW-iqH"/>
+                        <viewControllerLayoutGuide type="bottom" id="vsw-Ie-G8C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ly6-2Y-EwS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7v-t2-MN8">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Wtorek" id="ncz-oY-Zbt">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="50Z-Vo-N2B">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ClW-EX-7AN">
+                                                <rect key="frame" x="16" y="7" width="54" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                                                <state key="normal" title="←"/>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="Ly3-n1-A1I" eventType="touchUpInside" id="raM-fF-XbN"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="17" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dBk-r1-SMl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="jxL-de-Ezl" rowHeight="20" style="IBUITableViewCellStyleDefault" id="XTA-Z1-mvv">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XTA-Z1-mvv" id="J9g-aB-S28">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jxL-de-Ezl">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ly3-n1-A1I" id="fWa-0K-DSA"/>
+                                    <outlet property="delegate" destination="Ly3-n1-A1I" id="m5W-Qr-w7s"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l7v-t2-MN8" firstAttribute="trailing" secondItem="dBk-r1-SMl" secondAttribute="trailing" id="73x-4L-0aS"/>
+                            <constraint firstItem="dBk-r1-SMl" firstAttribute="leading" secondItem="Ly6-2Y-EwS" secondAttribute="leading" id="E3U-r6-91T"/>
+                            <constraint firstItem="dBk-r1-SMl" firstAttribute="leading" secondItem="l7v-t2-MN8" secondAttribute="leading" id="MKt-WT-Fba"/>
+                            <constraint firstItem="l7v-t2-MN8" firstAttribute="top" secondItem="7tP-VW-iqH" secondAttribute="bottom" id="Oyf-Xi-Oje"/>
+                            <constraint firstItem="dBk-r1-SMl" firstAttribute="bottom" secondItem="vsw-Ie-G8C" secondAttribute="top" id="kgp-9H-SAo"/>
+                            <constraint firstItem="dBk-r1-SMl" firstAttribute="top" secondItem="l7v-t2-MN8" secondAttribute="bottom" id="lGU-xF-L1l"/>
+                            <constraint firstAttribute="trailing" secondItem="dBk-r1-SMl" secondAttribute="trailing" id="yUQ-YG-F6V"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tbData" destination="dBk-r1-SMl" id="gad-g2-PH4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GaG-Mj-Odm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="1096"/>
+        </scene>
+        <!--Wednesday View Controller-->
+        <scene sceneID="8Qz-My-YQl">
+            <objects>
+                <viewController id="n3k-RZ-flF" customClass="WednesdayViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vt5-2o-5WH"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLG-fE-GX5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Od-32-M6H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGE-iM-3w1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Środa" id="2Il-q4-FpA">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="M3C-GS-7h8">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="V7V-H3-jSb">
+                                                <rect key="frame" x="16" y="7" width="54" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                                                <state key="normal" title="←"/>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="n3k-RZ-flF" eventType="touchUpInside" id="r7v-Y6-XfQ"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="17" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0JG-DP-Esi">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Scb-aB-xcB" rowHeight="20" style="IBUITableViewCellStyleDefault" id="Kkp-YO-OPR">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kkp-YO-OPR" id="s3l-0N-haa">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Scb-aB-xcB">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="n3k-RZ-flF" id="4ak-QM-09w"/>
+                                    <outlet property="delegate" destination="n3k-RZ-flF" id="t7q-Ot-ptU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rGE-iM-3w1" firstAttribute="leading" secondItem="2Od-32-M6H" secondAttribute="leading" id="57A-Pc-2pY"/>
+                            <constraint firstItem="0JG-DP-Esi" firstAttribute="top" secondItem="rGE-iM-3w1" secondAttribute="bottom" id="DMx-9h-ljS"/>
+                            <constraint firstAttribute="trailing" secondItem="rGE-iM-3w1" secondAttribute="trailing" id="DnP-2h-Jzw"/>
+                            <constraint firstItem="0JG-DP-Esi" firstAttribute="bottom" secondItem="HLG-fE-GX5" secondAttribute="top" id="FA4-6W-LUH"/>
+                            <constraint firstItem="rGE-iM-3w1" firstAttribute="leading" secondItem="0JG-DP-Esi" secondAttribute="leading" id="GyU-sw-Us4"/>
+                            <constraint firstItem="0JG-DP-Esi" firstAttribute="trailing" secondItem="rGE-iM-3w1" secondAttribute="trailing" id="sPX-xc-xIL"/>
+                            <constraint firstItem="rGE-iM-3w1" firstAttribute="top" secondItem="vt5-2o-5WH" secondAttribute="bottom" id="tvO-jH-rX6"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tbData" destination="0JG-DP-Esi" id="3Q3-Tr-wKJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FD-09-hfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1049" y="1023"/>
+        </scene>
+        <!--Thursday View Controller-->
+        <scene sceneID="1DL-xY-BFG">
+            <objects>
+                <viewController id="iYR-IX-VlU" customClass="ThursdayViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pxs-3R-lou"/>
+                        <viewControllerLayoutGuide type="bottom" id="5JB-30-ieR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0AS-Kl-dcO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYR-kJ-RGw">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Czwartek" id="qOW-Lf-ptG">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="ZYz-j5-ABs">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PUV-HC-djI">
+                                                <rect key="frame" x="16" y="7" width="54" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                                                <state key="normal" title="←"/>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="iYR-IX-VlU" eventType="touchUpInside" id="X0v-Av-yUL"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="17" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9UL-cu-bGl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="jdR-Lp-q98" rowHeight="20" style="IBUITableViewCellStyleDefault" id="FvY-FW-imD">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FvY-FW-imD" id="wVy-zI-JZr">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jdR-Lp-q98">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="iYR-IX-VlU" id="O0o-F0-Iaa"/>
+                                    <outlet property="delegate" destination="iYR-IX-VlU" id="Pm2-LV-lC9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9UL-cu-bGl" firstAttribute="top" secondItem="PYR-kJ-RGw" secondAttribute="bottom" id="AyV-MY-SOP"/>
+                            <constraint firstItem="PYR-kJ-RGw" firstAttribute="leading" secondItem="0AS-Kl-dcO" secondAttribute="leading" id="N0r-nr-IN5"/>
+                            <constraint firstItem="9UL-cu-bGl" firstAttribute="bottom" secondItem="5JB-30-ieR" secondAttribute="top" id="QVv-ca-OeA"/>
+                            <constraint firstItem="9UL-cu-bGl" firstAttribute="leading" secondItem="PYR-kJ-RGw" secondAttribute="leading" id="aHt-Tf-7e7"/>
+                            <constraint firstAttribute="trailing" secondItem="PYR-kJ-RGw" secondAttribute="trailing" id="iCV-Mg-qXn"/>
+                            <constraint firstItem="9UL-cu-bGl" firstAttribute="trailing" secondItem="PYR-kJ-RGw" secondAttribute="trailing" id="nsh-78-i7v"/>
+                            <constraint firstItem="PYR-kJ-RGw" firstAttribute="top" secondItem="pxs-3R-lou" secondAttribute="bottom" id="wNs-yr-gzx"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tbData" destination="9UL-cu-bGl" id="4d7-BN-Aau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X7p-Id-bO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1381" y="1023"/>
+        </scene>
+        <!--Friday View Controller-->
+        <scene sceneID="7Ty-lf-lkS">
+            <objects>
+                <viewController id="EPn-0m-7av" customClass="FridayViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="71s-HU-iBS"/>
+                        <viewControllerLayoutGuide type="bottom" id="NN4-qk-NDD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JFa-OD-fyw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE7-xZ-qV9">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Piątek" id="biC-Sq-IVQ">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="lP3-Cc-cu8">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2f6-mL-poC">
+                                                <rect key="frame" x="16" y="7" width="54" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                                                <state key="normal" title="←"/>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="EPn-0m-7av" eventType="touchUpInside" id="VaR-R0-EcJ"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="17" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ia0-PP-ZY6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="xCd-lI-xsE" rowHeight="20" style="IBUITableViewCellStyleDefault" id="fW7-vG-h1V">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fW7-vG-h1V" id="3je-lI-P2y">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xCd-lI-xsE">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EPn-0m-7av" id="mTT-oL-WNc"/>
+                                    <outlet property="delegate" destination="EPn-0m-7av" id="Ykw-Cv-fru"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mE7-xZ-qV9" firstAttribute="top" secondItem="71s-HU-iBS" secondAttribute="bottom" id="FhP-YN-IpE"/>
+                            <constraint firstItem="Ia0-PP-ZY6" firstAttribute="leading" secondItem="JFa-OD-fyw" secondAttribute="leading" id="IAD-2x-X1y"/>
+                            <constraint firstItem="mE7-xZ-qV9" firstAttribute="leading" secondItem="Ia0-PP-ZY6" secondAttribute="leading" id="RWa-Ql-kYQ"/>
+                            <constraint firstItem="Ia0-PP-ZY6" firstAttribute="bottom" secondItem="NN4-qk-NDD" secondAttribute="top" id="SFS-xC-jE7"/>
+                            <constraint firstAttribute="trailing" secondItem="Ia0-PP-ZY6" secondAttribute="trailing" id="dcf-jh-ocD"/>
+                            <constraint firstItem="Ia0-PP-ZY6" firstAttribute="top" secondItem="mE7-xZ-qV9" secondAttribute="bottom" id="rZ0-di-PMQ"/>
+                            <constraint firstItem="Ia0-PP-ZY6" firstAttribute="trailing" secondItem="mE7-xZ-qV9" secondAttribute="trailing" id="sSn-e6-1OE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tbData" destination="Ia0-PP-ZY6" id="hFx-yR-hHM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zc0-Ov-hoH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718" y="1023"/>
+        </scene>
+        <!--Saturday View Controller-->
+        <scene sceneID="bGN-84-JDq">
+            <objects>
+                <viewController id="kiG-pX-HuF" customClass="SaturdayViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sKu-nM-SoD"/>
+                        <viewControllerLayoutGuide type="bottom" id="LdJ-NL-KZB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c0e-fG-k1z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fda-R1-hIZ">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Sobota" id="oh4-PI-nwk">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="aUu-ge-hsf">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EuK-hR-CHN">
+                                                <rect key="frame" x="16" y="7" width="54" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                                                <state key="normal" title="←"/>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="kiG-pX-HuF" eventType="touchUpInside" id="0Tr-DD-vSo"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="17" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HHi-Ch-sC3">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="vnE-sR-ML9" rowHeight="20" style="IBUITableViewCellStyleDefault" id="dVT-jB-HHE">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dVT-jB-HHE" id="WZa-OU-Xbv">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vnE-sR-ML9">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kiG-pX-HuF" id="StJ-aM-blw"/>
+                                    <outlet property="delegate" destination="kiG-pX-HuF" id="zdY-2O-hdk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HHi-Ch-sC3" firstAttribute="top" secondItem="Fda-R1-hIZ" secondAttribute="bottom" id="3y4-io-FTH"/>
+                            <constraint firstAttribute="trailing" secondItem="HHi-Ch-sC3" secondAttribute="trailing" id="J0u-EL-CfR"/>
+                            <constraint firstItem="Fda-R1-hIZ" firstAttribute="leading" secondItem="HHi-Ch-sC3" secondAttribute="leading" id="W5b-hG-Ooi"/>
+                            <constraint firstItem="Fda-R1-hIZ" firstAttribute="top" secondItem="sKu-nM-SoD" secondAttribute="bottom" id="h08-Q0-15H"/>
+                            <constraint firstItem="Fda-R1-hIZ" firstAttribute="trailing" secondItem="HHi-Ch-sC3" secondAttribute="trailing" id="nWv-bB-J5Y"/>
+                            <constraint firstItem="HHi-Ch-sC3" firstAttribute="bottom" secondItem="LdJ-NL-KZB" secondAttribute="top" id="q2A-fo-Kgt"/>
+                            <constraint firstItem="Fda-R1-hIZ" firstAttribute="leading" secondItem="c0e-fG-k1z" secondAttribute="leading" id="uOl-CS-S6l"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tbData" destination="HHi-Ch-sC3" id="857-24-5IZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afg-g3-Vhe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045" y="1023"/>
+        </scene>
+        <!--Radio-->
+        <scene sceneID="oLp-tK-d3b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bQn-qG-coq" customClass="RadioTabBarItem" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Radio" image="radio.png" id="acW-dT-cKf">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HYr-c9-fh5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="radioTabBarItem" destination="acW-dT-cKf" id="0kv-57-xVk"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="aPa-H1-Pli"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTA-1m-d4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--Program-->
+        <scene sceneID="Ij9-aa-O0O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZA1-Gu-7jr" customClass="ProgramTabBarItem" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Program" image="calendar.png" id="cPa-gy-q4n">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3EZ-zQ-uuD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <outlet property="programTabBarItem" destination="cPa-gy-q4n" id="StN-Vv-wIZ"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="XTV-xg-Dzz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6L8-ut-10b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="741" y="490"/>
+        </scene>
+        <!--Sunday View Controller-->
+        <scene sceneID="P2d-bM-EjS">
+            <objects>
+                <viewController id="2uc-bR-ENu" customClass="SundayViewController" customModule="Republika" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y8V-ud-YxX"/>
+                        <viewControllerLayoutGuide type="bottom" id="u6z-ra-gXT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6JD-uT-eqp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-DJ-CfH">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="20"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Niedziela" id="6GY-ok-X7f">
+                                        <barButtonItem key="leftBarButtonItem" style="done" id="yjf-5D-GYq">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xZW-bl-Frz">
+                                                <rect key="frame" x="16" y="7" width="54" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
+                                                <state key="normal" title="←"/>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="2uc-bR-ENu" eventType="touchUpInside" id="fVb-9U-M9W"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="17" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3E5-Ir-1ZR">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="7Sa-xM-l9i" rowHeight="20" style="IBUITableViewCellStyleDefault" id="ZtM-8e-iiT">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZtM-8e-iiT" id="8nU-mT-heC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Sa-xM-l9i">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2uc-bR-ENu" id="DIB-e8-kQ1"/>
+                                    <outlet property="delegate" destination="2uc-bR-ENu" id="lK7-na-z82"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3E5-Ir-1ZR" firstAttribute="leading" secondItem="gpT-DJ-CfH" secondAttribute="leading" id="94v-hw-85J"/>
+                            <constraint firstAttribute="trailing" secondItem="3E5-Ir-1ZR" secondAttribute="trailing" id="URR-HX-okE"/>
+                            <constraint firstItem="3E5-Ir-1ZR" firstAttribute="top" secondItem="gpT-DJ-CfH" secondAttribute="bottom" id="c7q-8u-T1q"/>
+                            <constraint firstItem="gpT-DJ-CfH" firstAttribute="leading" secondItem="6JD-uT-eqp" secondAttribute="leading" id="gXA-5E-rgZ"/>
+                            <constraint firstItem="gpT-DJ-CfH" firstAttribute="trailing" secondItem="3E5-Ir-1ZR" secondAttribute="trailing" id="qFb-Aj-Dis"/>
+                            <constraint firstItem="gpT-DJ-CfH" firstAttribute="top" secondItem="Y8V-ud-YxX" secondAttribute="bottom" id="sb2-hL-Vu8"/>
+                            <constraint firstItem="3E5-Ir-1ZR" firstAttribute="bottom" secondItem="u6z-ra-gXT" secondAttribute="top" id="tkf-gT-QLC"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="tbData" destination="3E5-Ir-1ZR" id="BAG-pq-DGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQ2-vs-0M2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2384" y="1016"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo1.png" width="550" height="550"/>
+        <image name="calendar.png" width="25" height="25"/>
+        <image name="play@3.png" width="100" height="100"/>
+        <image name="radio.png" width="25" height="25"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+</document>
